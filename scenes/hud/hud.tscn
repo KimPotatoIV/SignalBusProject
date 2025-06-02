@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cux147830jjwb"]
+
+[ext_resource type="FontFile" uid="uid://0046xxg16xq0" path="res://fonts/PixelOperator8.ttf" id="1_48c2t"]
+[ext_resource type="Script" uid="uid://cik7wgp2n24fl" path="res://scenes/hud/hud.gd" id="1_cgeww"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_cgeww"]
+font = ExtResource("1_48c2t")
+font_size = 80
+font_color = Color(0.215686, 0.215686, 0.215686, 1)
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_cgeww")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_top = 48
+
+[node name="GameScoreLabel" type="Label" parent="MarginContainer"]
+layout_mode = 2
+text = "SCORE: 0"
+label_settings = SubResource("LabelSettings_cgeww")

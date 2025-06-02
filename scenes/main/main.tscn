@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://b11lnqu5lm8d2"]
+
+[ext_resource type="PackedScene" uid="uid://dxgbn13f67trt" path="res://scenes/terrain/terrain.tscn" id="1_hyk8p"]
+[ext_resource type="PackedScene" uid="uid://gn6noqi4hy3v" path="res://scenes/coin/coin.tscn" id="2_iuonh"]
+[ext_resource type="PackedScene" uid="uid://bqfspeyxuhtkc" path="res://scenes/knight/knight.tscn" id="3_k2fmo"]
+[ext_resource type="PackedScene" uid="uid://cux147830jjwb" path="res://scenes/hud/hud.tscn" id="4_l3cfh"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Terrain" parent="." instance=ExtResource("1_hyk8p")]
+
+[node name="Coins" type="Node2D" parent="."]
+
+[node name="Coin1" parent="Coins" instance=ExtResource("2_iuonh")]
+position = Vector2(128, 608)
+
+[node name="Coin2" parent="Coins" instance=ExtResource("2_iuonh")]
+position = Vector2(256, 672)
+
+[node name="Coin3" parent="Coins" instance=ExtResource("2_iuonh")]
+position = Vector2(384, 736)
+
+[node name="Coin4" parent="Coins" instance=ExtResource("2_iuonh")]
+position = Vector2(512, 800)
+
+[node name="Coin5" parent="Coins" instance=ExtResource("2_iuonh")]
+position = Vector2(1408, 800)
+
+[node name="Coin6" parent="Coins" instance=ExtResource("2_iuonh")]
+position = Vector2(1536, 736)
+
+[node name="Coin7" parent="Coins" instance=ExtResource("2_iuonh")]
+position = Vector2(1664, 672)
+
+[node name="Coin8" parent="Coins" instance=ExtResource("2_iuonh")]
+position = Vector2(1792, 608)
+
+[node name="Knight" parent="." instance=ExtResource("3_k2fmo")]
+position = Vector2(960, 848)
+
+[node name="HUD" parent="." instance=ExtResource("4_l3cfh")]
